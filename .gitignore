@@ -6,3 +6,8 @@ node_modules
 # CDK asset staging directory
 .cdk.staging
 cdk.out
+
+static/dist
+static/.parcel-cache
+node_modules
+static/node_modules

@@ -1,0 +1,8 @@
+{
+  "extends": ["@tsconfig/recommended/tsconfig.json"], // Extend a recommended configuration
+  "compilerOptions": {
+    "esModuleInterop": true, // Enables __importDefault helper for default imports
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react"
+  }
+}
