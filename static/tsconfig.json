@@ -3,6 +3,10 @@
   "compilerOptions": {
     "esModuleInterop": true, // Enables __importDefault helper for default imports
     "allowSyntheticDefaultImports": true,
-    "jsx": "react"
+    "jsx": "react",
+    "lib": ["dom", "ESNext"],
+    "paths": {
+      "~/*": ["./src/*"]
+    }
   }
 }
