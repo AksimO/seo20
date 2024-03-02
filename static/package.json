@@ -4,20 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel ./index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel --no-cache ./index.html"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/validator-eslint": "^2.11.0",
+    "@tsconfig/recommended": "^1.0.3",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
+    "eslint": "^7.32.0",
     "parcel": "^2.11.0",
+    "parcel-reporter-static-files-copy": "^1.5.3",
     "process": "^0.11.10",
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@tsconfig/recommended": "^1.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }

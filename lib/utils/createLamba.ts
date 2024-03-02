@@ -6,6 +6,7 @@ import {
 } from "aws-cdk-lib/aws-lambda-nodejs";
 import { RetentionDays } from "aws-cdk-lib/aws-logs";
 import { resolve } from "path";
+import { AWS_REGION } from "../config";
 
 export const LAMBDAS_PATH = resolve(__dirname, "../lambdas");
 export const resolveLambda = (lambdaFile: string, cwd = LAMBDAS_PATH) =>
@@ -26,6 +27,9 @@ export const createLambda = (
     entry: resolveLambda(lambdaPath, cwd),
     logRetention: RetentionDays.ONE_DAY,
     ...lambdaProps,
+    environment: {
+      ...(lambdaProps.environment || {}),
+    },
     bundling: {
       sourceMap: true,
       sourcesContent: true,

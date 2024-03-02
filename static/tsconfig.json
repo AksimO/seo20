@@ -1,12 +1,9 @@
 {
-  "extends": ["@tsconfig/recommended/tsconfig.json"], // Extend a recommended configuration
+  "extends": "@tsconfig/recommended/tsconfig.json",
   "compilerOptions": {
-    "esModuleInterop": true, // Enables __importDefault helper for default imports
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "react",
-    "lib": ["dom", "ESNext"],
-    "paths": {
-      "~/*": ["./src/*"]
-    }
+    "lib": ["dom", "ESNext"]
   }
 }

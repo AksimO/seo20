@@ -1,9 +1,11 @@
 import React from "react";
 import { WebsitesList } from "./ui/WebsitesList";
+import { AddWebsiteForm } from "./ui/AddWrbsiteForm/AddWebsiteForm";
 export const App = () => {
   return (
     <div>
-      <h1>App</h1>
+      <AddWebsiteForm />
+      <hr />
       <WebsitesList />
     </div>
   );

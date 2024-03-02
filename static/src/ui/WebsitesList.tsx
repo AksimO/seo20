@@ -8,7 +8,7 @@ type WMetaInfoPropsType = {
 const WMetaInfo = ({ w }: WMetaInfoPropsType) => {
   return (
     <div>
-      {w.id} - {w.url}
+      {w.origin} - {w.topic}
     </div>
   );
 };
@@ -18,7 +18,7 @@ export const WebsitesList = () => {
     <div>
       <h1>List</h1>
       {data?.map((w) => (
-        <WMetaInfo w={w} />
+        <WMetaInfo key={w.id} w={w} />
       ))}
     </div>
   );

@@ -1,4 +1,5 @@
 export type WebsiteMetaType = {
   id: string;
-  url: string;
+  origin: string;
+  topic: string;
 };
