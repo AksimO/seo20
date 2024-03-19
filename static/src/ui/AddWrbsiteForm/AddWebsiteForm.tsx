@@ -23,6 +23,11 @@ export const AddWebsiteForm = () => {
           className="input-field"
         />
         <input name="topic" placeholder="Enter topic" className="input-field" />
+        <input
+          name="s3path"
+          placeholder="Folder to upload"
+          className="input-field"
+        />
         <button type="submit" className="submit-btn">
           Add
         </button>

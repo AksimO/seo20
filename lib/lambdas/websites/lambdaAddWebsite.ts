@@ -16,7 +16,7 @@ export const lambdaAddWebsite = (
   event: APIGatewayProxyEvent
 ): Promise<APIGatewayProxyResult> => {
   // Parse `origin` and `topic` from the event
-  const { origin, topic } = tryParseJson(event.body || "{}") || {};
+  const { origin, topic, s3path } = tryParseJson(event.body || "{}") || {};
 
   if (!isValidUrl(origin)) {
     return resp400({ message: "Origin should be valid URL" });
@@ -25,6 +25,7 @@ export const lambdaAddWebsite = (
   const data = {
     origin,
     topic,
+    s3path,
     // Add any other necessary fields here
     id: uuidv4(),
     createdAt: Date.now(),
